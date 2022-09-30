@@ -5,19 +5,20 @@ import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import androidx.appcompat.app.AppCompatActivity
-import com.burhanyaprak.homework2patika.databinding.ActivityMainBinding
+import com.burhanyaprak.homework2patika.databinding.ActivitySignUpBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class SignUpActivity : AppCompatActivity() {
     private var isVisibilityOn = false
+    private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
-        binding.buttonSignUp.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+
+        binding.imageButtonGoBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
